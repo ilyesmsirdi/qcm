@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+
+		function testqcm(form) {
+var wintest = window.open("","fenetre2","scrollbars=no, resizable=no, height=250, width=370")
+
+var Contenu = "<HTML><HEAD><TITLE>Correction des questions du QCM</TITLE></HEAD>"
+Contenu += "<BODY SCROLL=AUTO LEFTMARGIN=60>"
+Contenu += "<H3><FONT COLOR='#800000'>Correction dynamique du test</FONT></H3>"
+Contenu += "<FONT SIZE=2>"
+
+if (form.question1[2].checked) {
+ if (form.question1[0].checked || form.question1[1].checked || form.question1[3].checked) {
+ Contenu += "<P><LI>La réponse à la question 1 est <U>incorrecte</U>." }
+else { Contenu += "<P><LI>La réponse à la question 1 est correcte." }
+}
+else { Contenu += "<P><LI>La réponse à la question 1 est <U>incorrecte</U>." }
+
+if (form.question2[0].checked) {
+ if (form.question2[1].checked || form.question2[2].checked || form.question2[3].checked) {
+ Contenu += "<P><LI>La réponse à la question 2 est <U>incorrecte</U>." }
+ else { Contenu += "<P><LI>La réponse à la question 2 est correcte." }
+ }
+else { Contenu += "<P><LI>La réponse à la question 2 est <U>incorrecte</U>." }
+
+if (form.question3[1].checked && form.question3[3].checked ) {
+ if (form.question3[0].checked || form.question3[2].checked || form.question3[4].checked) {
+ Contenu += "<P><LI>La réponse à la question 3 est <U>incorrecte</U>." }
+else { Contenu += "<P><LI>La réponse à la question 3 est correcte." }
+}
+else { Contenu += "<P><LI>La réponse à la question 3 est <U>incorrecte</U>." }
+
+Contenu += "</FONT>"
+Contenu += "<P><CENTER><FORM><INPUT TYPE='button' VALUE='OK'"
+onClick="'self.close()'></FORM>"
+Contenu += "</CENTER></BODY></HTML>"
+wintest.document.write(Contenu)
+}
+
+</script>
+	<link rel="stylesheet" type="text/css" href="cssqcm.css">
+</head>
+<body>
+	<table class="table">
+		<col span="3">
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<center><h3 class="titre">BTS SIO LYCEE VILGENIS</h3><hr></center>
+				<font size="2">
+				<p class="p"><b>Questionnaire sous forme de QCM. Les questions peuvent comporter une ou plusieurs bonnes réponses.</b></p>	
+				</font>
+			<form name="qcm" method="get">
+				<p><b>Question 1:</b></p>
+				<br>Le nombre binaire 1011 vaut en décimal
+				<i><li><input type="checkbox" name="question1" value="A">7</li>
+					<li><input type="checkbox" name="question1" value="B">9</li>
+					<li><input type="checkbox" name="question1" value="C">33</li>
+					<li><input type="checkbox" name="question1" value="D">11</li>
+
+</i>
+<p><b>Question 2:</b></p>
+				<br>Le nombre qui suit le nombre 4 en base 5 est:
+				<i><li><input type="checkbox" name="question2" value="A">10</li>
+					<li><input type="checkbox" name="question2" value="B">5</li>
+					<li><input type="checkbox" name="question2" value="C">0</li>
+					<li><input type="checkbox" name="question2" value="D">A</li>
+
+</i>
+<p><b>Question 3:</b></p>
+				<br>Combien y'a t-il d'octets dans un ko?
+				<i><li><input type="checkbox" name="question3" value="A">1000</li>
+					<li><input type="checkbox" name="question3" value="B">1024</li>
+					<li><input type="checkbox" name="question3" value="C">1048</li>
+					<li><input type="checkbox" name="question3" value="D">2048</li>
+
+</i>
+<p><b>Question 4:</b></p>
+				<br>Combien de bytes y'a t'il dans un Giga-Octet ?
+				<i><li><input type="checkbox" name="question4" value="A">1.000.000</li>
+					<li><input type="checkbox" name="question4" value="B">1.048.576.000</li>
+					<li><input type="checkbox" name="question4" value="C">1.073.741.824</li>
+					<li><input type="checkbox" name="question4" value="D">1.024.024.024</li>
+
+</i>
+<p><b>Question 5:</b></p>
+				<br>Un clavier français est un clavier ?
+				<i><li><input type="checkbox" name="question5" value="A">AZERTY</li>
+					<li><input type="checkbox" name="question5" value="B">QWERTY</li>
+					<li><input type="checkbox" name="question5" value="C">Type 12</li>
+					<li><input type="checkbox" name="question5" value="D">Type 02</li>
+
+</i>
+<p><b>Question 6:</b></p>
+				<br>Qu'est-ce qu'un upgrade ?
+				<i><li><input type="checkbox" name="question6" value="A">Une MAJ</li>
+					<li><input type="checkbox" name="question6" value="B">Le changement d'un fichier informatique vers un autre ordinateur</li>
+					<li><input type="checkbox" name="question6" value="C">Un diplôme d'informaticien</li>
+					<li><input type="checkbox" name="question6" value="D">Un système d’exploitation</li>
+
+</i>
+<p><b>Question 7:</b></p>
+				<br>Sous Windows XP, la configuration est enregistré dans  ?
+				<i><li><input type="checkbox" name="question7" value="A">Le fichier autoexec.bat</li>
+					<li><input type="checkbox" name="question7" value="B">Le fichier win.ini</li>
+					<li><input type="checkbox" name="question7" value="C">La base de registre</li>
+					<li><input type="checkbox" name="question7" value="D">La base de composants de windows</li>
+
+</i>
+<p><b>Question 8:</b></p>
+				<br>TIFF est un format :
+				<i><li><input type="checkbox" name="question8" value="A">d’images</li>
+					<li><input type="checkbox" name="question8" value="B">de base de données</li>
+					<li><input type="checkbox" name="question8" value="C">de Terminal Informatique de type FF</li>
+					<li><input type="checkbox" name="question8" value="D">de protocole internet</li>
+
+</i>
+<p><b>Question 9:</b></p>
+				<br>En gestion de projet qui appelle-t-on maîtrise d'ouvrage ?
+				<i><li><input type="checkbox" name="question9" value="A">le client</li>
+					<li><input type="checkbox" name="question9" value="B">le prestataire</li>
+					<li><input type="checkbox" name="question9" value="C">la société chargée de l’accompagnement</li>
+					<li><input type="checkbox" name="question9" value="D">les utilisateurs</li>
+
+</i>
+<p><b>Question 10:</b></p>
+				<br>Langages : quelle affirmation est fausse ?
+				<i><li><input type="checkbox" name="question10" value="A">Un programme écrit dans un langage dit "compilé" va être traduit une fois pour toutes par un programme annexe (le compilateur) afin de générer un nouveau fichier qui sera autonome</li>
+					<li><input type="checkbox" name="question10" value="B">Un programme écrit dans un langage interprété a besoin d'un programme auxiliaire (l'interpréteur) pour traduire au fur et à mesure les instructions du programme</li>
+					<li><input type="checkbox" name="question10" value="C">Le langage utilisé par le processeur, c'est-à-dire les données telles qu'elles lui arrivent, est appelé langage machine. Il s'agit de données élémentaires de 0 à F en hexadécimal.</li>
+					<li><input type="checkbox" name="question10" value="D">autres</li>
+
+</i>
+		 <p><center>
+<button class="color2"><a href="reponse.html">correction</a></button>
+ <INPUT type="reset" value="Effacer">
+ <INPUT type="button" VALUE="Corrigé" onClick="corrige()">	
+
+				</form></center>
+                </font></td>
+                <td>&nbsp;</td>
+
+</td>
+</tr>
+		</table>
+
+</body>
+</html>

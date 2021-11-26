@@ -1,0 +1,31 @@
+.table
+{
+width: 100%;
+align-content: center;
+border: 0;
+padding: 0;
+}
+.titre
+{
+float: right;
+align-content: top;
+color:  #800000;
+
+
+}
+.p
+{
+font-style: italic;
+color: #008000;
+}
+.color 
+{
+	color: lightseagreen;
+}
+.color2
+{
+ color: black;
+ 
+
+
+}
